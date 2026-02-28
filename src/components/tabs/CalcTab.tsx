@@ -27,7 +27,7 @@ export default function CalcTab() {
       exit={{ opacity: 0, x: 20 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="bg-zinc-900 rounded-2xl p-5 border border-zinc-800 shadow-lg space-y-5">
+      <div className="bg-zinc-900 rounded-2xl p-5 border border-zinc-800 shadow-lg space-y-5 overflow-hidden">
         <div>
           <label className="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">휴가 시작일</label>
           <input 
@@ -36,7 +36,7 @@ export default function CalcTab() {
             min="2026-01-01" 
             max="2026-12-31"
             onChange={e => setStartInput(e.target.value)} 
-            className="w-full h-12 px-4 bg-zinc-950 border border-zinc-800 rounded-xl text-sm font-bold text-white focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all [color-scheme:dark]" 
+            className="w-full min-w-0 max-w-full h-12 px-3 bg-zinc-950 border border-zinc-800 rounded-xl text-sm font-bold text-white focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all [color-scheme:dark] box-border" 
           />
         </div>
         <div>
