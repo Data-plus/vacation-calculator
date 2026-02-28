@@ -14,7 +14,8 @@ FROM nginx:alpine
 ENV PORT=8080
 
 # nginx config template with PORT substitution
-RUN printf 'server {\n\
+RUN mkdir -p /etc/nginx/templates && \
+    printf 'server {\n\
     listen ${PORT};\n\
     root /usr/share/nginx/html;\n\
     index index.html;\n\
