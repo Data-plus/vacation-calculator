@@ -36,7 +36,7 @@ export default function CalcTab() {
             min="2026-01-01" 
             max="2026-12-31"
             onChange={e => setStartInput(e.target.value)} 
-            className="w-full min-w-0 max-w-full h-12 px-3 bg-zinc-950 border border-zinc-800 rounded-xl text-sm font-bold text-white focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all [color-scheme:dark] box-border" 
+            className="w-[90%] min-w-0 h-12 px-3 bg-zinc-950 border border-zinc-800 rounded-xl text-sm font-bold text-white focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all [color-scheme:dark] box-border" 
           />
         </div>
         <div>
