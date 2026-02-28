@@ -1,0 +1,32 @@
+# 서비스 계정 사용 시 로그 설정 필수 (에러 방지)
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/vacation-calculator-git:$COMMIT_SHA'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/vacation-calculator-git:latest'
+      - '.'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/vacation-calculator-git:$COMMIT_SHA'
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'vacation-calculator-git'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/vacation-calculator-git:$COMMIT_SHA'
+      - '--region'
+      - 'us-west1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
