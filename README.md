@@ -18,3 +18,7 @@ View your app in AI Studio: https://ai.studio/apps/3e0012b4-e88d-49b7-bb51-5940e
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+---
+
+**2026 휴가 계산기** — 연차 1~20일, 언제 쓰면 가장 이득인지 자동 계산
