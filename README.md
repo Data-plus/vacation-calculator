@@ -1,24 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 2026 휴가 계산기
 
-# Run and deploy your AI Studio app
+연차 1~20일, 언제 쓰면 가장 이득인지 자동 계산해드립니다.
 
-This contains everything you need to run your app locally.
+**Live:** https://vacation-calculator-git-109084028527.asia-northeast3.run.app
 
-View your app in AI Studio: https://ai.studio/apps/3e0012b4-e88d-49b7-bb51-5940e1945ff1
+## 주요 기능
 
-## Run Locally
+- 연차 일수별 최적 휴가 구간 자동 추천
+- 공휴일·주말 연계 계산으로 최대 연속 휴일 확인
+- 직접 날짜 지정하여 개별 계산 가능
 
-**Prerequisites:**  Node.js
+## 기술 스택
 
+- React 19 + TypeScript
+- Vite 6
+- Tailwind CSS 4
+- Framer Motion
+- Gemini AI API
+- Cloud Run (asia-northeast3)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 로컬 실행
 
----
+```bash
+npm install
+```
 
-**2026 휴가 계산기** — 연차 1~20일, 언제 쓰면 가장 이득인지 자동 계산 (v0.0.1)
+`.env.local`에 Gemini API 키 설정:
+
+```
+GEMINI_API_KEY=your_api_key
+```
+
+```bash
+npm run dev
+```
+
+http://localhost:3000 에서 확인
