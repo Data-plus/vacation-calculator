@@ -1,0 +1,5 @@
+{
+  "name": "2026 휴가 계산기",
+  "description": "2026년 공휴일과 주말을 연계하여 최적의 연차 사용 일정을 찾아주는 계산기입니다.",
+  "requestFramePermissions": []
+}
